@@ -1,0 +1,6 @@
+admin 
+robots.txt 
+sitemap.xml 
+phpmyadmin 
+wp-admin 
+index.php
