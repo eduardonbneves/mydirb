@@ -3,11 +3,16 @@
 
 url=$1
 
+if [[ $url == "" ]]; then
+	echo "Please, insert a URL"
+	exit
+fi
+
 location=$(curl -s --head $url | grep Location | awk -F ' ' '{print $2}')
 
 if [[ $location != "" ]]; then
 
-	echo "Please, retry using URL $location"
+	echo "Please, retry using another URL or $location"
 	exit
 
 fi
